@@ -1,9 +1,9 @@
 module github.com/igadmg/goel
 
-go 1.25
+go 1.25.0
 
 require (
-	github.com/igadmg/goex v0.0.0-20260211205126-dbcbb32b8419
+	github.com/igadmg/goex v0.0.0-20260216122339-107b85204131
 	github.com/stretchr/testify v1.11.1
 )
 
