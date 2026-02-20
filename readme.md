@@ -21,12 +21,12 @@ You can embed any valid Go code within the `<?` and `?>` delimiters:
 
 
 ```
-<? 
-for i := 0; i < 10; i++ { 
+<?
+for i := 0; i < 10; i++ {
 ?>
     <p>Item <?= i ?></p>
-<? 
-} 
+<?
+}
 ?>
 ```
 
@@ -45,16 +45,16 @@ import (
 )
 
 func generate(wr io.Writer) {
-    for i := 0; i < 10; i++ { 
+    for i := 0; i < 10; i++ {
 ?>
     <p>Item <?= i ?></p>
-<? 
+<?
     }
-} 
+}
 ?>
 ```
 
-Later that function `generate` can be called from Go code. 
+Later that function `generate` can be called from Go code.
 
 ### Outputting Variables
 
@@ -96,12 +96,12 @@ import (
 )
 
 func generateItems(wr io.Writer) {
-    for i := 0; i < 10; i++ { 
+    for i := 0; i < 10; i++ {
 ?>
     <p>Item <?= i ?></p>
-<? 
+<?
     }
-} 
+}
 ?>
 ```
 
@@ -116,7 +116,7 @@ import (
 
 func generateTemplate(wr io.Writer) {
     generateItems(wr)
-} 
+}
 ?>
 ```
 
@@ -124,9 +124,9 @@ func generateTemplate(wr io.Writer) {
 
 To use the El tool from Go code put
 
-`//go:generate go run github.com/igadmg/goel`
+`//go:generate go run github.com/Mishka-Squat/goel`
 
-line anywhere in your code. It will scan project for `*.go.el` files and generate `*.go` files from them. It will process any `*.el` file and generate new file omitting `.el` extension. So `template.go.el` will be converted to `tempate.go`, and `template.cpp.el` will be converted to `template.cpp` (but C++ language model is not supported yet) 
+line anywhere in your code. It will scan project for `*.go.el` files and generate `*.go` files from them. It will process any `*.el` file and generate new file omitting `.el` extension. So `template.go.el` will be converted to `tempate.go`, and `template.cpp.el` will be converted to `template.cpp` (but C++ language model is not supported yet)
 
 ### Example
 

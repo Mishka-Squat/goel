@@ -15,7 +15,7 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/igadmg/goex/gx"
+	"github.com/Mishka-Squat/goex/gx"
 )
 
 var (
